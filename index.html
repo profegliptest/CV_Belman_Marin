@@ -3,72 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Vida</title>
+    <title>Hoja de Vida - Belman Alexis Marin Franco</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* --- VARIABLES DE DISEÑO --- */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        /* --- ESTILOS GENERALES --- */
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container {
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .cv-container {
             max-width: 800px;
-            background: white;
-            padding: 20px;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
-        h1, h2 {
-            color: #333;
+
+        /* --- CABECERA (HEADER) --- */
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 25px;
+            margin-bottom: 30px;
         }
-        .section {
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- SECCIONES --- */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- CONTACTO --- */
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-list li {
+            font-size: 0.95rem;
+        }
+
+        .contact-list a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .contact-list a:hover {
+            text-decoration: underline;
+            color: var(--primary-color);
+        }
+
+        /* --- EXPERIENCIA Y EDUCACIÓN --- */
+        .timeline-item {
             margin-bottom: 20px;
         }
-        .contacto, .experiencia, .educacion, .habilidades {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+
+        .timeline-header h3 {
+            font-size: 1.15rem;
+            color: #2d3748;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: #718096;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .timeline-item p {
+            color: #4a5568;
+            font-size: 0.95rem;
+            padding-left: 5px;
+        }
+
+        /* --- HABILIDADES --- */
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .skills-list li {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #bee3f8;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+            .cv-container {
+                padding: 20px;
+            }
+            .contact-list {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .timeline-header {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Nombre Completo</h1>
-        <p><strong>Profesión:</strong> Tu profesión</p>
+
+    <div class="cv-container">
         
-        <div class="section contacto">
-            <h2>Contacto</h2>
-            <p><strong>Teléfono:</strong> +57 123 456 7890</p>
-            <p><strong>Email:</strong> correo@ejemplo.com</p>
-            <p><strong>LinkedIn:</strong> linkedin.com/in/tuusuario</p>
-        </div>
+        <!-- CABECERA -->
+        <header>
+            <h1>Belman Alexis Marin Franco</h1>
+            <div class="subtitle">Analista en Desarrollo de Software</div>
+        </header>
 
-        <div class="section experiencia">
-            <h2>Experiencia Laboral</h2>
-            <p><strong>Empresa XYZ</strong> (2020 - Actualidad)</p>
-            <p>Puesto ocupado y descripción breve.</p>
+        <!-- CONTACTO -->
+        <section>
+            <h2>📞 Contacto</h2>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:profe.glip@gmail.com">Correo Personal</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tuusuario" target="_blank">linkedin.com/in/tuusuario</a></li>
+            </ul>
+        </section>
+
+        <!-- EXPERIENCIA LABORAL -->
+        <section>
+            <h2>🏢 Experiencia Laboral</h2>
             
-            <p><strong>Empresa ABC</strong> (2018 - 2020)</p>
-            <p>Puesto ocupado y descripción breve.</p>
-        </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Empresa XYZ</h3>
+                    <span class="date">(2020 - Actualidad)</span>
+                </div>
+                <p>Puesto ocupado y descripción breve de las responsabilidades, logros o tecnologías utilizadas en este rol.</p>
+            </div>
 
-        <div class="section educacion">
-            <h2>Educación</h2>
-            <p><strong>Universidad Ejemplo</strong> (2014 - 2018)</p>
-            <p>Título obtenido.</p>
-        </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Empresa ABC</h3>
+                    <span class="date">(2018 - 2020)</span>
+                </div>
+                <p>Puesto ocupado y descripción breve de las funciones desempeñadas durante este periodo laboral.</p>
+            </div>
+        </section>
 
-        <div class="section habilidades">
-            <h2>Habilidades</h2>
-            <ul>
+        <!-- EDUCACIÓN -->
+        <section>
+            <h2>🎓 Educación</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>Universidad Ejemplo</h3>
+                    <span class="date">(2014 - 2018)</span>
+                </div>
+                <p>Título obtenido (Grado, Licenciatura o Ingeniería).</p>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section>
+            <h2>💡 Habilidades</h2>
+            <ul class="skills-list">
                 <li>Habilidad 1</li>
                 <li>Habilidad 2</li>
                 <li>Habilidad 3</li>
             </ul>
-        </div>
+        </section>
+
     </div>
+
 </body>
-    
-<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/04/05/02/20250405021404-CM8Q1FN6.js"></script>
-    
 </html>
