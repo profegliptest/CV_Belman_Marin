@@ -9,11 +9,11 @@
 - **LinkedIn:** [linkedin.com/in/tuusuario](https://linkedin.com/in/tuusuario)
 
 ## 🏢 Experiencia Laboral
-### **Empresa XYZ** _(2020 - Actualidad)_
-- Puesto ocupado y descripción breve.
+### **SENA** _(2020 - Actualidad)_
+- Instructor.
 
-### **Empresa ABC** _(2018 - 2020)_
-- Puesto ocupado y descripción breve.
+### **Universidad ICESI** _(2018 - 2020)_
+- Profesor de Pensamiento Sistemico
 
 ## 🎓 Educación
 ### **Universidad Ejemplo** _(2014 - 2018)_
